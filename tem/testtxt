@@ -1,0 +1,170 @@
+  8 81 35 ,36 ,38 ,92 , 9 ,63 ,12 ,79 ,48 ,41 ,34 ,77 ,59 ,55 ,57 ,42 ,61 ,97 ,31 ,67 ,85 ,69 ,27 , 6 ,18 ,50 ,89 ,39 ,76 ,60 , 4 ,52 ,99 ,51 ,49 ,28 ,37 ,98 ,58 ,70 ,10 ,75 ,54 ,74 ,20 ,29 ,66 ,13 ,33 ,90 ,78 ,26 ,72 ,16 , 1 ,19 ,17 ,71 ,56 ,86 ,83 ,93 ,45 ,44 ,95 ,21 ,91 ,32 ,80 ,84 ,40 ,46 , 5 ,94 ,14 ,96 ,68 ,47 ,73 ,64 ,24 ,15 ,88 ,65 ,23 , 2 ,82 ,43 ,87 ,22 ,62 ,53 ,11 , 7 ,30 , 3 ,25 ,00
+
+
+ printf("==== stack a===\n");
+printstack(a);
+printf("==== stack b ===\n");
+    printstack(b);
+    printf("=== end ==== \n");
+    printf("================================\n");
+    printf("==== before push ===\n");
+    printstack(b);
+    push(&a,&b);
+    printf("==== stack b ===\n");
+    printstack(b);
+    printf("==== stack a ===\n");
+   
+    printf("=== end ==== \n");
+
+
+   41 59 32 7 35 31 0 "2 6 53 13 36" 29 20 43 10 26 "39 14 28 5 21 52 23" 47 8 12 27 58 42
+
+
+
+   printf("== stack a ==\n");
+    printstack(a);
+    printf("============ push in b ============\n");
+    push(&b,&a,'b');
+    push(&b,&a,'b');
+    push(&b,&a,'b');
+    push(&b,&a,'b');
+    push(&b,&a,'b');
+    push(&b,&a,'b');
+    push(&b,&a,'b');
+    printf("== stack a ==\n");
+    printstack(a);
+    printf("== stack b ==\n");
+    printstack(b);
+    printf("============ rotate ============\n");
+    Rotate(&a,&b);
+    printf("== stack a ==\n");
+    printstack(a);
+    printf("== stack b ==\n");
+    printstack(b);
+    freeAllStack(&a);
+    freeAllStack(&b);
+    atexit(leaks);
+
+
+
+
+7 23 37 83 13 89 27 62 97 56 54 39 52 91 21 31 76
+
+
+
+
+
+nt i = 0;
+    int shu = Max(*a) / 3 ;
+    int begin = 0;
+    int half = 0;
+    int j;
+    while(i < 3)
+    {
+        j = 0;
+        half = shu / 2;
+        printf("sh %d\n",shu);
+        printf("hul %d\n",shu);
+        printf("sh %d\n",shu);
+        while(j < size && shu <= size)
+        {
+            if((*a)->index >= begin && (*a)->index <= shu)
+            {
+                push(b,a,'b');
+                if ((*b)->index >= begin && (*b)->index <= half)
+                    rotate(b,'b');
+            }
+            else
+                rotate(a,'a');
+            j++;
+        }
+        size = stackSize(*a);
+        begin = shu;
+        shu += shu;
+        i++;   
+    }
+
+
+
+
+
+     // else if ((*b) && ft_stacklast(*a)->index == max_index)
+        // {
+        //     pa(a, b);
+        //     ra(a);
+        // }
+        // else if ((*b) && ft_stacklast(*a)->index == (*a)->index - 1)
+        //     rra(a);
+        // else if ((*b) && ft_stacklast((*a))->index < (*b)->index)
+        // {
+        //     pa(a, b);
+        //     ra(a);
+        // }
+        // else if ((*b) && ft_stacklast(*a)->index < ft_stacklast(*b)->index)
+        // {
+        //     rrb(b);
+        //     pa(a, b);
+        //     ra(a);
+        // }
+
+
+
+        // else if (*b && ft_check(*b , (*a)->index-1))
+        //     rb(b);
+        // else
+        // {
+        //     rrb(b);
+        //     //pa(a, b);
+        // }
+
+
+
+
+
+        size = stackSize(*b);
+		stack *tmp;
+		tmp = *b;
+		size = stackSize(*b);
+		j = 0;
+		while(j < size && max != 1 && tmp != NULL)
+		{
+			max = Max(tmp); // index lkbir
+			l = lastStack(tmp);
+			if((tmp)->index == max)
+			{
+				push(a,b,'a');
+				max--;
+			}
+			if(l->index == max)
+			{
+				reverseRotate(b,'b');
+				push(a,b,'a');
+			}
+			else if((tmp)->next->index == max)
+			{
+				swap(b,'b');
+				push(a,b,'a');
+			}
+			else
+			    rotate(b,'b');
+			sortALL(a,b,size);
+			j++;
+		}
+
+
+
+
+
+        home / math / random number generator
+Random Number Generator
+This version of the generator creates a random integer. It can deal with very large integers up to a few thousand digits.
+
+Lower Limit	
+1
+Upper Limit	
+100
+ 
+Comprehensive Version
+This version of the generator can create one or many random integers or decimals. It can deal with very large numbers with up to 999 digits of precision.
+
+Result 89 23 72 104 62 31 100 84 63 65 56 85 33 15 11 45 109 39 41 71 16 55 40 13 105 28 81 25 70 14 67 64 22 10 9 112 30 88 38 29 42 19 59 106 77 58 91 20 95 98 35 51 96 12 27 53 50 34 86 17
