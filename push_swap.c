@@ -6,13 +6,13 @@
 /*   By: mochenna <mochenna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/13 19:41:15 by mochenna          #+#    #+#             */
-/*   Updated: 2024/03/02 06:10:51 by mochenna         ###   ########.fr       */
+/*   Updated: 2024/03/03 00:12:42 by mochenna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	pushswap(stack **a, stack **b)
+void	pushswap(t_stack **a, t_stack **b)
 {
 	int	size;
 
@@ -31,13 +31,13 @@ void	pushswap(stack **a, stack **b)
 
 int	main(int arc, char **arv)
 {
-	stack	*a;
-	stack	*b;
+	t_stack	*a;
+	t_stack	*b;
 
 	if (arc == 1)
 		return (0);
 	if (check(arc, arv))
-		return (error());
+		return (error(0));
 	a = creatstack(arc, arv);
 	if (checksortstack(&a))
 		return (0);

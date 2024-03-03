@@ -6,13 +6,13 @@
 /*   By: mochenna <mochenna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/10 03:03:37 by mochenna          #+#    #+#             */
-/*   Updated: 2024/03/02 05:30:02 by mochenna         ###   ########.fr       */
+/*   Updated: 2024/03/03 00:07:48 by mochenna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	swap(stack **a, char b)
+void	swap(t_stack **a, char b)
 {
 	int		tem;
 	int		index;
@@ -31,10 +31,10 @@ void	swap(stack **a, char b)
 		write(1, "sb\n", 3);
 }
 
-void	push(stack **t, stack **d, char m)
+void	push(t_stack **t, t_stack **d, char m)
 {
 	int		r;
-	stack	*tem;
+	t_stack	*tem;
 
 	if (!(*d))
 		return ;
@@ -50,9 +50,9 @@ void	push(stack **t, stack **d, char m)
 		write(1, "pb\n", 3);
 }
 
-void	rotate(stack **lst, char b)
+void	rotate(t_stack **lst, char b)
 {
-	stack	*last;
+	t_stack	*last;
 
 	if (!(*lst) || !(*lst)->next)
 		return ;
@@ -66,10 +66,10 @@ void	rotate(stack **lst, char b)
 		write(1, "rb\n", 3);
 }
 
-void	reverserotate(stack **s, int p)
+void	reverserotate(t_stack **s, int p)
 {
-	stack	*a;
-	stack	*temp;
+	t_stack	*a;
+	t_stack	*temp;
 	int		i[2];
 
 	if (!(*s) || !(*s)->next)

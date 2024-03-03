@@ -6,13 +6,13 @@
 /*   By: mochenna <mochenna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 01:35:40 by mochenna          #+#    #+#             */
-/*   Updated: 2024/03/02 05:49:41 by mochenna         ###   ########.fr       */
+/*   Updated: 2024/03/03 00:08:20 by mochenna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	sort3(stack **a, int size, int max)
+void	sort3(t_stack **a, int size, int max)
 {
 	if (size == 2)
 		swap(a, 'a');
@@ -27,9 +27,9 @@ void	sort3(stack **a, int size, int max)
 	}
 }
 
-void	sort4(stack **a, stack **b, int size)
+void	sort4(t_stack **a, t_stack **b, int size)
 {
-	stack	*s;
+	t_stack	*s;
 	int		i;
 
 	i = 0;
@@ -49,9 +49,9 @@ void	sort4(stack **a, stack **b, int size)
 	push(a, b, 'a');
 }
 
-void	sort5(stack **a, stack **b, int size)
+void	sort5(t_stack **a, t_stack **b, int size)
 {
-	stack	*s;
+	t_stack	*s;
 	int		p[2];
 
 	p[0] = 0;

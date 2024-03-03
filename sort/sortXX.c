@@ -6,13 +6,13 @@
 /*   By: mochenna <mochenna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 23:52:24 by mochenna          #+#    #+#             */
-/*   Updated: 2024/03/02 06:02:31 by mochenna         ###   ########.fr       */
+/*   Updated: 2024/03/03 00:14:05 by mochenna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	get_me_back(stack **a, stack **b, int size)
+void	get_me_back(t_stack **a, t_stack **b, int size)
 {
 	int	max;
 	int	half;
@@ -22,21 +22,7 @@ void	get_me_back(stack **a, stack **b, int size)
 	while (stacksize(*b) != 0)
 	{
 		if (get_me_position(max, *b, half))
-		{
-			if ((*b)->index == max)
-			{
-				push(a, b, 'a');
-				max--;
-			}
-			else if ((*b)->next->index == max)
-			{
-				swap(b, 'b');
-				push(a, b, 'a');
-				max--;
-			}
-			else
-				rotate(b, 'b');
-		}
+			topstack(a, b, &max);
 		else
 			bottomstack(a, b, &max);
 		size = stacksize(*b);
@@ -44,11 +30,11 @@ void	get_me_back(stack **a, stack **b, int size)
 	}
 }
 
-void	sortall(stack **a, stack **b, int len)
+void	sortall(t_stack **a, t_stack **b, int len)
 {
 	int	i;
 
-	i = 0;
+	i = 1;
 	while (stacksize(*a) > 0)
 	{
 		if ((*a)->index <= i)
@@ -68,7 +54,7 @@ void	sortall(stack **a, stack **b, int len)
 	get_me_back(a, b, stacksize(*b));
 }
 
-void	sortx(stack **a, stack **b, int size)
+void	sortx(t_stack **a, t_stack **b, int size)
 {
 	if (size <= 100)
 		sortall(a, b, 10);

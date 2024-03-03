@@ -6,16 +6,16 @@
 /*   By: mochenna <mochenna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/01 14:59:46 by mochenna          #+#    #+#             */
-/*   Updated: 2024/03/02 06:03:59 by mochenna         ###   ########.fr       */
+/*   Updated: 2024/03/03 00:08:54 by mochenna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-int	get_me_position(int max, stack *b, int half)
+int	get_me_position(int max, t_stack *b, int half)
 {
 	int		i;
-	stack	*b1;
+	t_stack	*b1;
 
 	i = 0;
 	b1 = b;
@@ -29,7 +29,24 @@ int	get_me_position(int max, stack *b, int half)
 	return (0);
 }
 
-void	bottomstack(stack **a, stack **b, int *max)
+void	topstack(t_stack **a, t_stack **b, int *max)
+{
+	if ((*b)->index == *max)
+	{
+		push(a, b, 'a');
+		*max -= 1;
+	}
+	else if ((*b)->next->index == *max)
+	{
+		swap(b, 'b');
+		push(a, b, 'a');
+		*max -= 1;
+	}
+	else
+		rotate(b, 'b');
+}
+
+void	bottomstack(t_stack **a, t_stack **b, int *max)
 {
 	if ((*b)->index == *max)
 	{

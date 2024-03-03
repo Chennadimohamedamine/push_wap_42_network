@@ -6,7 +6,7 @@
 /*   By: mochenna <mochenna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/11 23:11:35 by mochenna          #+#    #+#             */
-/*   Updated: 2024/03/02 05:29:10 by mochenna         ###   ########.fr       */
+/*   Updated: 2024/03/03 02:12:50 by mochenna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ size_t	ft_strlen(char *str)
 		i++;
 	return (i);
 }
+
 char	*ft_strdup(char *s1)
 {
 	char	*cpy;
@@ -40,12 +41,12 @@ char	*ft_strdup(char *s1)
 	cpy[i] = 0;
 	return (cpy);
 }
+
 char	*ft_strjoin(char *s1, char *s2)
 {
 	char	*s;
 	int		i;
-	int j = 0;
-
+	int		j;
 
 	if (!s1)
 		return (ft_strdup(s2));
@@ -62,24 +63,26 @@ char	*ft_strjoin(char *s1, char *s2)
 	s[i++] = ' ';
 	while (s2[j])
 		s[i++] = s2[j++];
-    s[i] = 0;
-	return (free(s1),s);
+	s[i] = 0;
+	return (free(s1), s);
 }
-char *make_line(int ac,char **av)
-{
-    int i = 1;
-	char *s;
 
-    s = NULL;
-    while (i < ac)
-    {
-            s = ft_strjoin(s,av[i]);
-            if(!s)
-            {
-                freememory(i,av,0);
-                return (NULL);
-            }
-        i++;
-    }
-    return (s);
+char	*make_line(int ac, char **av)
+{
+	int		i;
+	char	*s;
+
+	s = NULL;
+	i = 1;
+	while (i < ac)
+	{
+		s = ft_strjoin(s, av[i]);
+		if (!s)
+		{
+			freememory(i, av, 0);
+			return (NULL);
+		}
+		i++;
+	}
+	return (s);
 }

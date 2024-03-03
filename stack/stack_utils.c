@@ -6,23 +6,24 @@
 /*   By: mochenna <mochenna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 02:13:22 by mochenna          #+#    #+#             */
-/*   Updated: 2024/03/02 05:31:48 by mochenna         ###   ########.fr       */
+/*   Updated: 2024/03/03 01:56:17 by mochenna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-stack    *laststack(stack *lst)
+t_stack	*laststack(t_stack *lst)
 {
-    if (!lst)
-        return (NULL);
-    while (lst->next)
-        lst = lst->next;
-    return (lst);
+	if (!lst)
+		return (NULL);
+	while (lst->next)
+		lst = lst->next;
+	return (lst);
 }
-void	creatinback(stack **lst,stack *new)
+
+void	creatinback(t_stack **lst, t_stack *new)
 {
-	stack	*last;
+	t_stack	*last;
 
 	if (lst == NULL || new == NULL)
 		return ;
@@ -32,20 +33,23 @@ void	creatinback(stack **lst,stack *new)
 	else
 		last->next = new;
 }
-void    freeallstack(stack **a)
+
+void	freeallstack(t_stack **a)
 {
-    stack *f;
-    while (*a)
-    {
-      f = (*a)->next;
-      free(*a);
-      *a = f;
-    }
+	t_stack	*f;
+
+	while (*a)
+	{
+		f = (*a)->next;
+		free(*a);
+		*a = f;
+	}
 }
-int	stacksize(stack *a)
+
+int	stacksize(t_stack *a)
 {
 	int		i;
-	stack	*c;
+	t_stack	*c;
 
 	if (!a)
 		return (0);
