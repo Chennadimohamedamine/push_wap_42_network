@@ -6,7 +6,7 @@
 /*   By: mochenna <mochenna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/15 21:48:00 by mochenna          #+#    #+#             */
-/*   Updated: 2024/03/03 00:24:00 by mochenna         ###   ########.fr       */
+/*   Updated: 2024/03/04 18:19:37 by mochenna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ int	checksortstack(t_stack **a)
 
 int	error(int i)
 {
-	write(1, "Error", 5);
+	write(1, "Error\n", 6);
 	return (i);
 }
 

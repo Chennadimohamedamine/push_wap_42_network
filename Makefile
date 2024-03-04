@@ -3,7 +3,8 @@ FILESOURCE = utils/check.c utils/makeLine.c utils/splitNumber.c \
 			sort/sort3.c sort/sortXX.c sort/moves.c sort/moves2.c sort/sortUtils.c 
 FILESOURCEBONUS = stack/stack_function.c stack/checkSortStack.c  stack/getMaxStack.c \
 				stack/stack_utils.c sort/moves.c sort/moves2.c utils/check.c \
-				utils/makeLine.c utils/splitNumber.c getmove/get_next_line.c getmove/get_next_line_utils.c\
+				utils/makeLine.c utils/splitNumber.c  function/file_utils.c \
+				function/get_next_line.c function/get_next_line_utils.c \
 
 NAME = LibPushSwap.a		
 NAMEBONUS = LibPushSwapBonus.a		

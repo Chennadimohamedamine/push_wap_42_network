@@ -6,7 +6,7 @@
 /*   By: mochenna <mochenna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 05:01:00 by mochenna          #+#    #+#             */
-/*   Updated: 2024/03/03 16:00:04 by mochenna         ###   ########.fr       */
+/*   Updated: 2024/03/04 20:25:41 by mochenna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,11 +53,11 @@ void	sort4(t_stack **a, t_stack **b, int size);
 void	sortx(t_stack **a, t_stack **b, int size);
 void	swap(t_stack **a, char b);
 void	push(t_stack **t, t_stack **d, char m);
-void	swapall(t_stack **a, t_stack **b);
+void	swapall(t_stack **a, t_stack **b, char s);
 void	rotate(t_stack **lst, char b);
-void	rotateall(t_stack **a, t_stack **b);
+void	rotateall(t_stack **a, t_stack **b, char s);
 void	reverserotate(t_stack **s, int p);
-void	reverseall(t_stack **a, t_stack **b);
+void	reverseall(t_stack **a, t_stack **b, char s);
 t_stack	*laststack(t_stack *lst);
 void	creatinback(t_stack **lst, t_stack *new);
 
