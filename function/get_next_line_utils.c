@@ -6,7 +6,7 @@
 /*   By: mochenna <mochenna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/08 11:00:41 by mochenna          #+#    #+#             */
-/*   Updated: 2024/03/03 20:27:55 by mochenna         ###   ########.fr       */
+/*   Updated: 2024/03/04 22:22:37 by mochenna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,7 @@ char	*freemery(char *f1, char *f2)
 		free(f2);
 	return (NULL);
 }
+
 char	*join_line(char *s1, char *s2)
 {
 	char	*l;

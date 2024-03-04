@@ -6,7 +6,7 @@
 /*   By: mochenna <mochenna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 02:12:16 by mochenna          #+#    #+#             */
-/*   Updated: 2024/03/04 20:31:29 by mochenna         ###   ########.fr       */
+/*   Updated: 2024/03/04 22:11:56 by mochenna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	rotateall(t_stack **a, t_stack **b, char s)
 	rotate(b, 'r');
 }
 
-void	reverseall(t_stack **a, t_stack **b,char s)
+void	reverseall(t_stack **a, t_stack **b, char s)
 {
 	if (s != 'n')
 		write(1, "rrr\n", 3);

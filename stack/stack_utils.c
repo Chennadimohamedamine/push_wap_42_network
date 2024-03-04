@@ -6,7 +6,7 @@
 /*   By: mochenna <mochenna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 02:13:22 by mochenna          #+#    #+#             */
-/*   Updated: 2024/03/04 19:30:24 by mochenna         ###   ########.fr       */
+/*   Updated: 2024/03/04 22:12:50 by mochenna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void	creatinback(t_stack **lst, t_stack *new)
 void	freeallstack(t_stack **a)
 {
 	t_stack	*f;
-	
+
 	if (!(*a))
 		return ;
 	while (*a)
