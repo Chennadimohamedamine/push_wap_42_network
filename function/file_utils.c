@@ -6,7 +6,7 @@
 /*   By: mochenna <mochenna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 23:11:27 by mochenna          #+#    #+#             */
-/*   Updated: 2024/03/04 22:31:21 by mochenna         ###   ########.fr       */
+/*   Updated: 2024/03/05 00:05:19 by mochenna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	finition(t_stack **a, char *s1, char *s2, int i)
 	if (s1 != NULL)
 		free(s1);
 	freeallstack(a);
-	write(1, "Error\n", 6);
+	write(2, "Error\n", 6);
 	exit(i);
 }
 
@@ -75,4 +75,14 @@ int	checkmoves(char *str)
 		return (0);
 	else
 		return (1);
+}
+
+void	isemty(t_stack **a)
+{
+	if (checksortstack(a))
+		write(1, "OK\n", 3);
+	else
+		write(1, "KO\n", 3);
+	freeallstack(a);
+	exit(0);
 }

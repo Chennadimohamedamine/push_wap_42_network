@@ -6,7 +6,7 @@
 /*   By: mochenna <mochenna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/10 03:03:37 by mochenna          #+#    #+#             */
-/*   Updated: 2024/03/03 00:07:48 by mochenna         ###   ########.fr       */
+/*   Updated: 2024/03/04 23:32:45 by mochenna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ void	push(t_stack **t, t_stack **d, char m)
 	*d = tem;
 	if (m == 'a')
 		write(1, "pa\n", 3);
-	else
+	else if (m == 'b')
 		write(1, "pb\n", 3);
 }
 

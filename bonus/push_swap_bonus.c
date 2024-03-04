@@ -6,7 +6,7 @@
 /*   By: mochenna <mochenna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 02:40:33 by mochenna          #+#    #+#             */
-/*   Updated: 2024/03/04 22:21:16 by mochenna         ###   ########.fr       */
+/*   Updated: 2024/03/05 00:04:06 by mochenna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,8 @@ void	bonus_part(t_stack **a, t_stack **b)
 		if (!str)
 		{
 			free(str);
+			if (!str1)
+				isemty(a);
 			break ;
 		}
 		if (checkmoves(str))

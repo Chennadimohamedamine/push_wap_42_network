@@ -6,7 +6,7 @@
 /*   By: mochenna <mochenna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 02:46:33 by mochenna          #+#    #+#             */
-/*   Updated: 2024/03/04 22:15:35 by mochenna         ###   ########.fr       */
+/*   Updated: 2024/03/05 00:06:16 by mochenna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,4 +31,5 @@ void	finition(t_stack **a, char *s1, char *s2, int i);
 int		checkmoves(char *str);
 void	runmoves(t_stack **a, t_stack **b, char *s);
 int		ft_strcmp(char *s1, char *s2);
+void	isemty(t_stack **a);
 #endif
