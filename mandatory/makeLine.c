@@ -6,11 +6,11 @@
 /*   By: mochenna <mochenna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/11 23:11:35 by mochenna          #+#    #+#             */
-/*   Updated: 2024/03/03 02:12:50 by mochenna         ###   ########.fr       */
+/*   Updated: 2024/03/07 21:49:02 by mochenna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 size_t	ft_strlen(char *str)
 {

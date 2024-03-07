@@ -6,11 +6,11 @@
 /*   By: mochenna <mochenna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/11 23:21:39 by mochenna          #+#    #+#             */
-/*   Updated: 2024/03/03 02:31:50 by mochenna         ###   ########.fr       */
+/*   Updated: 2024/03/07 19:23:38 by mochenna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 long	convertint(char *str)
 {

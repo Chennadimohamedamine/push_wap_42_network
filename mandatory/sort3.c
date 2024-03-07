@@ -6,11 +6,11 @@
 /*   By: mochenna <mochenna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 01:35:40 by mochenna          #+#    #+#             */
-/*   Updated: 2024/03/03 00:08:20 by mochenna         ###   ########.fr       */
+/*   Updated: 2024/03/07 19:23:26 by mochenna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 void	sort3(t_stack **a, int size, int max)
 {

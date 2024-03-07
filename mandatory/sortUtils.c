@@ -6,11 +6,11 @@
 /*   By: mochenna <mochenna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/01 14:59:46 by mochenna          #+#    #+#             */
-/*   Updated: 2024/03/03 00:08:54 by mochenna         ###   ########.fr       */
+/*   Updated: 2024/03/07 19:23:31 by mochenna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 int	get_me_position(int max, t_stack *b, int half)
 {

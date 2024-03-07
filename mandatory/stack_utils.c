@@ -6,11 +6,11 @@
 /*   By: mochenna <mochenna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 02:13:22 by mochenna          #+#    #+#             */
-/*   Updated: 2024/03/04 22:12:50 by mochenna         ###   ########.fr       */
+/*   Updated: 2024/03/07 19:23:41 by mochenna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 t_stack	*laststack(t_stack *lst)
 {

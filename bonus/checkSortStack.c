@@ -5,12 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mochenna <mochenna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/15 21:48:00 by mochenna          #+#    #+#             */
-/*   Updated: 2024/03/04 23:40:01 by mochenna         ###   ########.fr       */
+/*   Created: 2024/03/07 19:02:24 by mochenna          #+#    #+#             */
+/*   Updated: 2024/03/08 00:47:23 by mochenna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap_bonus.h"
 
 int	check_sort_stack(t_stack *s, int r)
 {

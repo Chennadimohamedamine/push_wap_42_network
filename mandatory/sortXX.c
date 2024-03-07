@@ -6,11 +6,11 @@
 /*   By: mochenna <mochenna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 23:52:24 by mochenna          #+#    #+#             */
-/*   Updated: 2024/03/03 00:14:05 by mochenna         ###   ########.fr       */
+/*   Updated: 2024/03/07 19:23:34 by mochenna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 void	get_me_back(t_stack **a, t_stack **b, int size)
 {

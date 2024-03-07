@@ -5,12 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mochenna <mochenna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/17 02:09:35 by mochenna          #+#    #+#             */
-/*   Updated: 2024/03/03 00:45:39 by mochenna         ###   ########.fr       */
+/*   Created: 2024/03/07 19:02:29 by mochenna          #+#    #+#             */
+/*   Updated: 2024/03/08 00:47:53 by mochenna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap_bonus.h"
 
 int	searchmax(t_stack *s, int r)
 {

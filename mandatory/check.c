@@ -6,11 +6,11 @@
 /*   By: mochenna <mochenna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/15 04:13:53 by mochenna          #+#    #+#             */
-/*   Updated: 2024/03/03 02:07:58 by mochenna         ###   ########.fr       */
+/*   Updated: 2024/03/07 21:50:08 by mochenna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 int	repeate(int s, char **av, int ac, int j)
 {

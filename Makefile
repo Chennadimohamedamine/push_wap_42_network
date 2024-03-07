@@ -1,43 +1,35 @@
-FILESOURCE = utils/check.c utils/makeLine.c utils/splitNumber.c \
-			stack/stack_function.c  stack/checkSortStack.c  stack/getMaxStack.c stack/stack_utils.c\
-			sort/sort3.c sort/sortXX.c sort/moves.c sort/moves2.c sort/sortUtils.c 
-FILESOURCEBONUS = stack/stack_function.c stack/checkSortStack.c  stack/getMaxStack.c \
-				stack/stack_utils.c sort/moves.c sort/moves2.c utils/check.c \
-				utils/makeLine.c utils/splitNumber.c  function/file_utils.c \
-				function/get_next_line.c function/get_next_line_utils.c \
-
-NAME = LibPushSwap.a		
-NAMEBONUS = LibPushSwapBonus.a		
+FILESOURCE = mandatory/push_swap.c mandatory/check.c mandatory/makeLine.c mandatory/splitNumber.c \
+			mandatory/stack_function.c  mandatory/checkSortStack.c  mandatory/getMaxStack.c mandatory/stack_utils.c\
+			mandatory/sort3.c mandatory/sortXX.c mandatory/moves.c mandatory/moves2.c mandatory/sortUtils.c 
+FILESOURCEBONUS = bonus/stack_function.c bonus/checkSortStack.c  bonus/getMaxStack.c \
+				bonus/stack_utils.c bonus/moves.c bonus/moves2.c bonus/check.c \
+				bonus/makeLine.c bonus/push_swap_bonus.c bonus/splitNumber.c  bonus/file_utils.c \
+				bonus/get_next_line.c bonus/get_next_line_utils.c \
+	
 OBJECTFILES = $(FILESOURCE:%.c=%.o)
 OBJECTFILESBONUS = $(FILESOURCEBONUS:%.c=%.o)
 PROGRAM = push_swap
 PROGRAMBONUS = checker
 
-all : $(NAME)
-	cc -Wall -Wextra -Werror push_swap.c $(NAME)-o $(PROGRAM) 
+$(PROGRAM): $(OBJECTFILES)
+	cc -Wall -Wextra -Werror $(OBJECTFILES) -o $(PROGRAM)
 
+all : $(PROGRAM)
 
-$(NAME): $(OBJECTFILES)
-	ar rcs $(NAME) $(OBJECTFILES)
-
-%.o: %.c push_swap.h
+%.o: %.c mandatory/push_swap.h bonus/push_swap_bonus.h
 	cc -Wall -Wextra -Werror -o $@ -c $<
 
-bonus :$(NAMEBONUS)
-	cc -Wall -Wextra -Werror ./bonus/push_swap_bonus.c $(NAMEBONUS)-o $(PROGRAMBONUS)
 
-$(NAMEBONUS): $(OBJECTFILESBONUS)
-	ar rcs $(NAMEBONUS) $(OBJECTFILESBONUS)
+bonus : $(OBJECTFILESBONUS)
+	cc -Wall -Wextra -Werror $(OBJECTFILESBONUS) -o $(PROGRAMBONUS)
 
-%.o: %.c ./bonus/push_swap_bonus.h
-	cc -Wall -Wextra -Werror -o $@ -c $<
 clean:
-	rm -f $(OBJECTFILES) $(NAME)
-	rm -f $(OBJECTFILESBONUS) $(NAMEBONUS)
+	rm -f $(OBJECTFILES)
+	rm -f $(OBJECTFILESBONUS)
 
 fclean: clean
-	rm -f $(NAME) $(PROGRAM)
-	rm -f $(NAMEBONUS) $(PROGRAMBONUS)
+	rm -f $(PROGRAM)
+	rm -f $(PROGRAMBONUS)
 
 re: fclean all
 

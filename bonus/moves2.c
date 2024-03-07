@@ -5,12 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mochenna <mochenna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/02 02:12:16 by mochenna          #+#    #+#             */
-/*   Updated: 2024/03/04 22:11:56 by mochenna         ###   ########.fr       */
+/*   Created: 2024/03/07 19:02:40 by mochenna          #+#    #+#             */
+/*   Updated: 2024/03/08 00:49:29 by mochenna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap_bonus.h"
 
 void	swapall(t_stack **a, t_stack **b, char s)
 {
