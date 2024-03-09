@@ -14,11 +14,11 @@ PROGRAMBONUS = checker
 $(PROGRAM): $(OBJECTFILES)
 	cc -Wall -Wextra -Werror $(OBJECTFILES) -o $(PROGRAM)
 
-all : $(PROGRAM)
 
 %.o: %.c mandatory/push_swap.h bonus/push_swap_bonus.h
 	cc -Wall -Wextra -Werror -o $@ -c $<
 
+all : $(PROGRAM)
 
 bonus : $(OBJECTFILESBONUS)
 	cc -Wall -Wextra -Werror $(OBJECTFILESBONUS) -o $(PROGRAMBONUS)
